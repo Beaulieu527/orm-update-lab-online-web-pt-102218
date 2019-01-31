@@ -26,6 +26,18 @@ class Student
   def self.find_by_name
   end
 
+  def update
+  end
 
+  def saves
+    
+    sql = <<-SQL
+      INSERT INTO students (name, grade)
+      VALUES (?, ?)
+    SQL
 
+    DB[:conn].execute(sql, self.name, self.grade)
+  end
+  end
+  
 end
