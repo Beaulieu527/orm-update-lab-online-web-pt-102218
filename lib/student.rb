@@ -43,9 +43,12 @@ class Student
   end
 
   def update
+    sql = "UPDATE songs SET name = ?, grade = ? WHERE name = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.name)
   end
 
   def save
+    
     sql = <<-SQL
      INSERT INTO students (name, grade)
      VALUES (?, ?)
