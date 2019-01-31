@@ -40,7 +40,7 @@ class Student
       grade = row[2]
       student = self.new(name, grade, id)
   end
-    
+
   def self.find_by_name(name)
     sql = "SELECT * FROM students WHERE name = ?"
     result = DB[:conn].execute(sql, name)[0]
