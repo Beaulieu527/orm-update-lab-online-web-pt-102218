@@ -19,7 +19,7 @@ class Student
   def self.create
     new_student = new(name, grade)
     new_student.save
-    new_student
+    return new_student
   end
 
   def self.create_table
