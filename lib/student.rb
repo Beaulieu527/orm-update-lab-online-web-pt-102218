@@ -42,7 +42,7 @@ class Student
   def update
   end
 
-  def saves
+  def save
     sql = <<-SQL
       INSERT INTO students (name, grade)
       VALUES (?, ?)
