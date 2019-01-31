@@ -21,7 +21,7 @@ class Student
     new_student.save
     return new_student
   end
-  
+
   def self.create_table
     sql = <<-SQL
     CREATE TABLE IF NOT EXISTS students (
